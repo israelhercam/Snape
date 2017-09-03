@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<estudiantes>
+    <estudiante carnet="123456">
+        <nombre>Test</nombre>
+        <carrera>Compu</carrera>
+        <correo>eadan</correo>
+        <telefono>123546</telefono>
+        <calificacion>100</calificacion>
+    </estudiante>
+    <estudiante carnet="1234562">
+        <nombre>Test2</nombre>
+        <carrera>Compu</carrera>
+        <correo>eadan</correo>
+        <telefono>123546</telefono>
+        <calificacion>100</calificacion>
+    </estudiante>
+</estudiantes>
