@@ -41,7 +41,7 @@ public class Estudiantes {
      * @param estudiante Estudiante a añadir.
      */
     public void add(Estudiante estudiante){
-        if (!verificarEstudiante(estudiante))
+        if (!verificarCarnet(estudiante.getCarnet()))
             lista.add(estudiante);
     }
 
@@ -50,10 +50,10 @@ public class Estudiantes {
      * @param estudianteVerificado Estudiante que se busca en la lista.
      * @return
      */
-    public boolean verificarEstudiante(Estudiante estudianteVerificado){
+    public boolean verificarCarnet(int estudianteVerificado){
         for (Estudiante estudianteVerificar:
              getLista()) {
-            if (estudianteVerificado.getCarnet()==estudianteVerificar.getCarnet())
+            if (estudianteVerificado==estudianteVerificar.getCarnet())
                 return true;
         }
         return false;

@@ -1,10 +1,14 @@
 package Controllers;
 
 import Models.Estudiante;
+import Models.Wrappers.Estudiantes;
+import Utils.Enums.Carrera;
+import Utils.Utils;
 import Views.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -12,15 +16,20 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 public class EstudiantesController extends ParentController{
 
+    Estudiantes estudiantes=Main.getInstance().estudiantes;
 
     public TableView<Estudiante> tblEstudiantes;
-    public TextField txtNombre;
     public TableColumn tbcCarnet;
     public TableColumn tbcNombre;
     public TableColumn tbcCarrera;
     public TableColumn tbcCorreo;
     public TableColumn tbcTelefono;
     public TableColumn tbcCalificacion;
+    public TextField txtNombre;
+    public TextField txtCarnet;
+    public TextField txtCorreo;
+    public TextField txtTelefono;
+    public ComboBox cBoxCarrera;
 
 
     public void initialize(){
@@ -35,17 +44,47 @@ public class EstudiantesController extends ParentController{
         //se refresca la lista
         refreshList();
 
+        poblarCarreras();
+
     }
 
     /**
      * Metodo para refrecar el TableView con los estudiantes
      */
     public void refreshList(){
-        ObservableList<Estudiante> list = FXCollections.observableArrayList(Main.getInstance().estudiantes.getLista());
+        ObservableList<Estudiante> list = FXCollections.observableArrayList(estudiantes.getLista());
         tblEstudiantes.setItems(list);
     }
 
-    public void agregarEstudiante(ActionEvent actionEvent) {
+    public void agregarEstudiante(ActionEvent actionEvent) throws Exception {
+        if (!Utils.validarCorreo(txtCorreo.getText())||
+                !Utils.validarNumero(txtTelefono.getText())||
+                !Utils.validarNumero(txtCarnet.getText())||
+                estudiantes.verificarCarnet(Integer.parseInt(txtCarnet.getText()))||
+                cBoxCarrera.getValue()==null){
+            Utils.mostrarError("Error","Error en los datos ingresados","Revise los datos ingresados!");
+            return;
+        }
 
+        Estudiante nuevo = new Estudiante(txtNombre.getText(),Integer.parseInt(txtCarnet.getText()),cBoxCarrera.getValue().toString(),txtCorreo.getText(),Integer.parseInt(txtTelefono.getText()));
+
+        txtNombre.setText("");
+        txtCarnet.setText("");
+        txtCorreo.setText("");
+        txtTelefono.setText("");
+        cBoxCarrera.setValue(null);
+
+        estudiantes.add(nuevo);
+        estudiantes.saveInXML();
+        refreshList();
     }
+
+
+    private void poblarCarreras(){
+        for (Carrera carrera: Carrera.values()) {
+            cBoxCarrera.getItems().add(carrera.name());
+        }
+    }
+
+
 }

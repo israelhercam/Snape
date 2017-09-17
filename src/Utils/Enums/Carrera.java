@@ -1,4 +1,4 @@
-package Enums;
+package Utils.Enums;
 
 public enum Carrera {
     ADMINISTRACION_DE_EMPRESAS,
@@ -22,5 +22,6 @@ public enum Carrera {
     INGENIERIA_MECATRONICA,
     INGENIERIA_EN_MANTENIMIENTO_INDUSTRIAL,
     INGENIERIA_EN_MATERIALES;
+
 
 }

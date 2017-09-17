@@ -14,4 +14,25 @@
         <telefono>123546</telefono>
         <calificacion>100</calificacion>
     </estudiante>
+    <estudiante carnet="132">
+        <nombre>sdf</nombre>
+        <carrera>ADMINISTRACION_DE_EMPRESAS</carrera>
+        <correo>sdf@sadf.com</correo>
+        <telefono>123</telefono>
+        <calificacion>100</calificacion>
+    </estudiante>
+    <estudiante carnet="1324">
+        <nombre>sdf</nombre>
+        <carrera>ADMINISTRACION_DE_EMPRESAS</carrera>
+        <correo>sdf@sadf.com</correo>
+        <telefono>123</telefono>
+        <calificacion>100</calificacion>
+    </estudiante>
+    <estudiante carnet="3221">
+        <nombre>asd</nombre>
+        <carrera>ENSENIANZA_DE_LA_MATEMATICA_CON_ENTORNOS_TECNOLOGICOS</carrera>
+        <correo>asd@asd.com</correo>
+        <telefono>321</telefono>
+        <calificacion>100</calificacion>
+    </estudiante>
 </estudiantes>
