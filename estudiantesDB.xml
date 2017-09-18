@@ -35,4 +35,18 @@
         <telefono>321</telefono>
         <calificacion>100</calificacion>
     </estudiante>
+    <estudiante carnet="354">
+        <nombre>asd</nombre>
+        <carrera>ENSENIANZA_DE_LA_MATEMATICA_CON_ENTORNOS_TECNOLOGICOS</carrera>
+        <correo>asdd@asd.com</correo>
+        <telefono>6354</telefono>
+        <calificacion>100</calificacion>
+    </estudiante>
+    <estudiante carnet="123444">
+        <nombre>sf</nombre>
+        <carrera>ENSENIANZA_DE_LA_MATEMATICA_CON_ENTORNOS_TECNOLOGICOS</carrera>
+        <correo>sdf@sd.ci</correo>
+        <telefono>6874</telefono>
+        <calificacion>100</calificacion>
+    </estudiante>
 </estudiantes>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<horarios>
+    <horario>
+        <turnos>
+            <dia>MONDAY</dia>
+            <inicio/>
+            <fin/>
+        </turnos>
+        <turnos>
+            <dia>MONDAY</dia>
+            <inicio/>
+            <fin/>
+        </turnos>
+        <turnos>
+            <dia>TUESDAY</dia>
+            <inicio/>
+            <fin/>
+        </turnos>
+    </horario>
+</horarios>

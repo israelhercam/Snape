@@ -1,6 +1,7 @@
 package Views;
 
 import Models.Wrappers.Estudiantes;
+import Models.Wrappers.Horarios;
 import Models.Wrappers.Salas;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +14,7 @@ public class Main extends Application {
     //TODO: Precargar 10 estudiantes en el XML
     public Estudiantes estudiantes;
     public Salas salas;
-
+    public Horarios horarios;
     Stage stage;
 
     private static Main instance;
@@ -35,9 +36,11 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         estudiantes=new Estudiantes();
         salas=new Salas();
+        horarios=new Horarios();
+
         estudiantes.loadFromXML();
         salas.loadFromXML();
-
+        horarios.loadFromXML();
 
         stage=primaryStage;
 
@@ -64,6 +67,8 @@ public class Main extends Application {
         stage.sizeToScene();
         return page;
     }
+
+
 
 
 }

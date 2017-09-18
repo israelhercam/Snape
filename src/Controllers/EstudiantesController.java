@@ -83,7 +83,7 @@ public class EstudiantesController extends ParentController{
 
     private void poblarCarreras(){
         for (Carrera carrera: Carrera.values()) {
-            cBoxCarrera.getItems().add(carrera.name());
+            cBoxCarrera.getItems().add(carrera);
         }
     }
 

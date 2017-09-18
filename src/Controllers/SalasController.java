@@ -7,10 +7,17 @@ import Views.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
+import java.io.IOException;
 
 public class SalasController {
     public TableColumn tbcId;
@@ -23,7 +30,7 @@ public class SalasController {
     public TextField txtUbicacion;
     public TextField txtCapacidad;
     public TextField txtRecursos;
-
+    public static String id;
     Salas salas = Main.getInstance().salas;
 
 
@@ -47,7 +54,8 @@ public class SalasController {
             return;
         }
         Sala nueva=new Sala(txtUbicacion.getText(),Integer.parseInt(txtCapacidad.getText()),txtRecursos.getText());
-
+        id=nueva.getId();
+        obtenerHorario();
         txtUbicacion.setText("");
         txtCapacidad.setText("");
         txtRecursos.setText("");
@@ -64,4 +72,22 @@ public class SalasController {
         tblSalas.setItems(list);
     }
 
+
+    public void obtenerHorario() throws IOException {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getResource("/Views/JavaFX/horario.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Horario");
+            stage.setScene(new Scene(root, 800, 450));
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.show();
+
+            // Hide this current window (if this is what you want)
+            //((Node)(event.getSource())).getScene().getWindow().hide();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
