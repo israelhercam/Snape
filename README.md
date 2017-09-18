@@ -6,8 +6,8 @@ _**WIP**_
 ### Camino
 * **[DONE]** Requerimiento ​ 1
 * Requerimiento ​ 2
-* **[WIP]** Requerimiento ​ 3 -Falta horarios-
-* Requerimiento ​ 4
+* **[Done(?)]** Requerimiento ​ 3 -Horarios se hacen-
+* **[Done]** Requerimiento ​ 4
 * Requerimiento ​ 5
 * Requerimiento ​ 6
 * Requerimiento ​ 7

@@ -14,8 +14,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.util.converter.IntegerStringConverter;
 
 import java.io.IOException;
 
@@ -42,7 +44,9 @@ public class SalasController {
         tbcRecursos.setCellValueFactory(new PropertyValueFactory<>("recursos"));
         tbcEstado.setCellValueFactory(new PropertyValueFactory<>("estado"));
         tbcCalificacion.setCellValueFactory(new PropertyValueFactory<>("calificacion"));
-
+        tbcUbicacion.setCellFactory(TextFieldTableCell.forTableColumn());
+        tbcCapacidad.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
+        tbcRecursos.setCellFactory(TextFieldTableCell.forTableColumn());
         refrescarLista();
     }
     public void agregarSala(ActionEvent actionEvent) throws Exception {
@@ -90,4 +94,32 @@ public class SalasController {
             e.printStackTrace();
         }
     }
+
+    public void editarUbicacion(TableColumn.CellEditEvent actionEvent) throws Exception {
+        for (Sala sala:
+             salas.getLista()) {
+            if(sala.getId().equals(((Sala) actionEvent.getRowValue()).getId()))
+                sala.setUbicacion(actionEvent.getNewValue().toString());
+        }
+        salas.saveInXML();
+    }
+
+    public void editarCapacidad(TableColumn.CellEditEvent cellEditEvent) throws Exception{
+        for (Sala sala:
+                salas.getLista()) {
+            if(sala.getId().equals(((Sala) cellEditEvent.getRowValue()).getId()))
+                sala.setCapacidadMaxima(Integer.parseInt(cellEditEvent.getNewValue().toString()));
+        }
+        salas.saveInXML();
+    }
+
+    public void editarRecursos(TableColumn.CellEditEvent cellEditEvent) throws Exception{
+        for (Sala sala:
+                salas.getLista()) {
+            if(sala.getId().equals(((Sala) cellEditEvent.getRowValue()).getId()))
+                sala.setRecursos(cellEditEvent.getNewValue().toString());
+        }
+        salas.saveInXML();
+    }
+
 }

@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <horarios>
     <horario>
-        <turnos>
-            <dia>MONDAY</dia>
-            <inicio/>
-            <fin/>
-        </turnos>
-        <turnos>
-            <dia>MONDAY</dia>
-            <inicio/>
-            <fin/>
-        </turnos>
+        <idSala>SAL-17</idSala>
         <turnos>
             <dia>TUESDAY</dia>
-            <inicio/>
-            <fin/>
+            <inicio>00:00</inicio>
+            <fin>01:00</fin>
         </turnos>
     </horario>
 </horarios>

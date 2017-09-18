@@ -2,11 +2,11 @@
 <salas>
     <sala>
         <calificacion>100</calificacion>
-        <capacidadMaxima>2</capacidadMaxima>
+        <capacidadMaxima>23</capacidadMaxima>
         <estado>Activa</estado>
         <id>SAL-1</id>
-        <recursos>Nada</recursos>
-        <ubicacion>Por Ahi</ubicacion>
+        <recursos>Cosas</recursos>
+        <ubicacion>Ahi</ubicacion>
     </sala>
     <sala>
         <calificacion>100</calificacion>
@@ -86,6 +86,54 @@
         <estado>Activa</estado>
         <id>SAL-11</id>
         <recursos>asd</recursos>
+        <ubicacion>asd</ubicacion>
+    </sala>
+    <sala>
+        <calificacion>100</calificacion>
+        <capacidadMaxima>4</capacidadMaxima>
+        <estado>Activa</estado>
+        <id>SAL-12</id>
+        <recursos>gf</recursos>
+        <ubicacion>klj</ubicacion>
+    </sala>
+    <sala>
+        <calificacion>100</calificacion>
+        <capacidadMaxima>2</capacidadMaxima>
+        <estado>Activa</estado>
+        <id>SAL-13</id>
+        <recursos>asd</recursos>
+        <ubicacion>ads</ubicacion>
+    </sala>
+    <sala>
+        <calificacion>100</calificacion>
+        <capacidadMaxima>2</capacidadMaxima>
+        <estado>Activa</estado>
+        <id>SAL-14</id>
+        <recursos>ads</recursos>
+        <ubicacion>asd</ubicacion>
+    </sala>
+    <sala>
+        <calificacion>100</calificacion>
+        <capacidadMaxima>2</capacidadMaxima>
+        <estado>Activa</estado>
+        <id>SAL-15</id>
+        <recursos>asd</recursos>
+        <ubicacion>asd</ubicacion>
+    </sala>
+    <sala>
+        <calificacion>100</calificacion>
+        <capacidadMaxima>2</capacidadMaxima>
+        <estado>Activa</estado>
+        <id>SAL-16</id>
+        <recursos>asd</recursos>
+        <ubicacion>asd</ubicacion>
+    </sala>
+    <sala>
+        <calificacion>100</calificacion>
+        <capacidadMaxima>2</capacidadMaxima>
+        <estado>Activa</estado>
+        <id>SAL-17</id>
+        <recursos>sa</recursos>
         <ubicacion>asd</ubicacion>
     </sala>
 </salas>

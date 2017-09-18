@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlType;
 import java.util.ArrayList;
 
 @XmlType(propOrder = {"idSala","turnos"})
-@XmlRootElement(name = "turno")
+@XmlRootElement(name = "horario")
 public class Horario {
     private String idSala;
     private ArrayList<Turno> turnos;
@@ -17,6 +17,7 @@ public class Horario {
     }
 
     public Horario(String idSala) {
+        this.idSala=idSala;
         turnos=new ArrayList<>();
     }
 
@@ -29,7 +30,7 @@ public class Horario {
         this.turnos = turnos;
     }
 
-    @XmlElement
+    @XmlElement(name="idSala")
     public String getIdSala() {
         return idSala;
     }

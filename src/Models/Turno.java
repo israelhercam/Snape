@@ -1,12 +1,16 @@
 package Models;
 
+import Models.Adapters.LocalTimeAdapter;
+
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.DayOfWeek;
 import java.time.LocalTime;
 
 @XmlType(propOrder = {"dia","inicio","fin"})
+
 @XmlRootElement(name = "turno")
 public class Turno {
     private DayOfWeek dia;
@@ -31,6 +35,7 @@ public class Turno {
     }
 
     @XmlElement
+    @XmlJavaTypeAdapter(LocalTimeAdapter.class)
     public LocalTime getInicio() {
         return inicio;
     }
@@ -40,6 +45,8 @@ public class Turno {
     }
 
     @XmlElement
+    @XmlJavaTypeAdapter(LocalTimeAdapter.class)
+
     public LocalTime getFin() {
         return fin;
     }

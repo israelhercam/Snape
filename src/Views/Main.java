@@ -46,7 +46,7 @@ public class Main extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("/Views/JavaFX/main.fxml"));
         primaryStage.setTitle("Sistema SNAPE");
-        primaryStage.setScene(new Scene(root, 700,450));
+        primaryStage.setScene(new Scene(root, 800,500));
         primaryStage.show();
 
 
@@ -58,7 +58,7 @@ public class Main extends Application {
         Parent page = FXMLLoader.load(getClass().getResource(fxml));
         Scene scene = stage.getScene();
         if (scene == null) {
-            scene = new Scene(page, 700, 450);
+            scene = new Scene(page, 800, 500);
             //scene.getStylesheets().add(getClass().getResource("demo.css").toExternalForm());
             stage.setScene(scene);
         } else {
