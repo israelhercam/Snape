@@ -15,7 +15,7 @@
   </rowConstraints>
    <children>
       <fx:include source="menuBar.fxml" GridPane.columnSpan="2147483647" GridPane.valignment="TOP" />
-      <TitledPane animated="false" collapsible="false" prefHeight="1000.0" text="Estudiantes" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.vgrow="ALWAYS">
+      <TitledPane animated="false" collapsible="false" contentDisplay="RIGHT" graphicTextGap="10.0" prefHeight="1000.0" text="Estudiantes" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.vgrow="ALWAYS">
          <content>
             <TableView fx:id="tblEstudiantes" prefHeight="200.0" prefWidth="200.0">
               <columns>
@@ -31,6 +31,9 @@
                </columnResizePolicy>
             </TableView>
          </content>
+         <graphic>
+            <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="Consultar Estudiante" />
+         </graphic>
       </TitledPane>
       <TitledPane animated="false" collapsible="false" prefHeight="1000.0" text="Nuevo" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.rowSpan="2147483647">
          <content>
@@ -53,12 +56,12 @@
                   <Label text="Carrera" GridPane.rowIndex="2" />
                   <Label text="Correo" GridPane.rowIndex="3" />
                   <Label text="Telefono" GridPane.rowIndex="4" />
-                  <Button mnemonicParsing="false" onAction="#agregarEstudiante" text="Agregar" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                  <TextField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField fx:id="txtCarnet" GridPane.columnIndex="1" />
+                  <TextField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cBoxCarrera" prefWidth="150.0" promptText="Carrera" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <TextField fx:id="txtCorreo" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <TextField fx:id="txtTelefono" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <ComboBox fx:id="cBoxCarrera" prefWidth="150.0" promptText="Carrera" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#agregarEstudiante" text="Agregar" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                </children>
             </GridPane>
          </content>

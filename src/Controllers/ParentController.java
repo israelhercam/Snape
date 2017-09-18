@@ -3,11 +3,9 @@ package Controllers;
 
 import Views.Main;
 import javafx.event.ActionEvent;
-import javafx.scene.control.MenuItem;
 
 public class ParentController {
-    public MenuItem menuAgregarEstudiante;
-    public void menuAgregarEstudiante(ActionEvent actionEvent) {
+    public void menuAdministrarEstudiantes(ActionEvent actionEvent) {
         try {
             Main.getInstance().replaceSceneContent("/Views/JavaFX/estudiantes.fxml");
 
@@ -17,4 +15,12 @@ public class ParentController {
     }
 
 
+    public void menuAdministrarSalas(ActionEvent actionEvent) {
+        try {
+            Main.getInstance().replaceSceneContent("/Views/JavaFX/salas.fxml");
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
 }

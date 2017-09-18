@@ -70,7 +70,7 @@ public class Estudiantes {
         Marshaller marshallerObj = contextObj.createMarshaller();
         marshallerObj.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-        marshallerObj.marshal(this, new File("EstudiantesDB.xml"));
+        marshallerObj.marshal(this, new File("estudiantesDB.xml"));
 
     }
 
@@ -79,7 +79,7 @@ public class Estudiantes {
      * @throws JAXBException
      */
     public void loadFromXML() throws JAXBException {
-        File file = new File( "EstudiantesDB.xml" );
+        File file = new File( "estudiantesDB.xml" );
         JAXBContext jaxbContext = JAXBContext.newInstance( Estudiantes.class );
 
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();

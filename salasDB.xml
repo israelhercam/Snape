@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<salas>
+    <sala>
+        <calificacion>100</calificacion>
+        <capacidadMaxima>2</capacidadMaxima>
+        <estado>Activa</estado>
+        <id>SAL-1</id>
+        <recursos>Nada</recursos>
+        <ubicacion>Por Ahi</ubicacion>
+    </sala>
+    <sala>
+        <calificacion>100</calificacion>
+        <capacidadMaxima>2</capacidadMaxima>
+        <estado>Activa</estado>
+        <id>SAL-2</id>
+        <recursos>Nada</recursos>
+        <ubicacion>Por Ahi</ubicacion>
+    </sala>
+</salas>

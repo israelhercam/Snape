@@ -1,6 +1,7 @@
 package Views;
 
 import Models.Wrappers.Estudiantes;
+import Models.Wrappers.Salas;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,8 +10,12 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    Stage stage;
+    //TODO: Precargar 10 estudiantes en el XML
     public Estudiantes estudiantes;
+    public Salas salas;
+
+    Stage stage;
+
     private static Main instance;
     public Main () {
         instance=this;
@@ -29,7 +34,10 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         estudiantes=new Estudiantes();
+        salas=new Salas();
         estudiantes.loadFromXML();
+        salas.loadFromXML();
+
 
         stage=primaryStage;
 

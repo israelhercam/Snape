@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<MenuBar xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="Controllers.ParentController">
+<MenuBar xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ParentController">
     <menus>
-        <Menu mnemonicParsing="false" text="Archivo">
+        <Menu mnemonicParsing="false" text="Estudiantes">
+         <items>
+            <MenuItem mnemonicParsing="false" onAction="#menuAdministrarEstudiantes" text="Administrar estudiantes" />
+         </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Salas">
             <items>
-                <MenuItem mnemonicParsing="false" text="Close" />
+                <MenuItem mnemonicParsing="false" onAction="#menuAdministrarSalas" text="Administrar salas" />
             </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="Edit">
+        <Menu mnemonicParsing="false" text="x">
             <items>
                 <MenuItem mnemonicParsing="false" text="Delete" />
             </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="Estudiantes">
-         <items>
-            <MenuItem mnemonicParsing="false" onAction="#menuAgregarEstudiante" text="Administrar estudiantes" />
-         </items>
-        </Menu>
-        <Menu mnemonicParsing="false" text="Help">
+        <Menu mnemonicParsing="false" text="Ayuda">
             <items>
-                <MenuItem mnemonicParsing="false" text="About" />
+                <MenuItem mnemonicParsing="false" text="Acerca" />
             </items>
         </Menu>
     </menus>

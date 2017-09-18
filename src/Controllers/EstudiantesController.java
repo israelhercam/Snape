@@ -42,7 +42,7 @@ public class EstudiantesController extends ParentController{
         tbcCalificacion.setCellValueFactory(new PropertyValueFactory<>("calificacion"));
 
         //se refresca la lista
-        refreshList();
+        refrescarLista();
 
         poblarCarreras();
 
@@ -51,17 +51,18 @@ public class EstudiantesController extends ParentController{
     /**
      * Metodo para refrecar el TableView con los estudiantes
      */
-    public void refreshList(){
+    public void refrescarLista(){
         ObservableList<Estudiante> list = FXCollections.observableArrayList(estudiantes.getLista());
         tblEstudiantes.setItems(list);
     }
 
     public void agregarEstudiante(ActionEvent actionEvent) throws Exception {
-        if (!Utils.validarCorreo(txtCorreo.getText())||
-                !Utils.validarNumero(txtTelefono.getText())||
-                !Utils.validarNumero(txtCarnet.getText())||
-                estudiantes.verificarCarnet(Integer.parseInt(txtCarnet.getText()))||
-                cBoxCarrera.getValue()==null){
+        if (!Utils.validarCorreo(txtCorreo.getText())
+                ||!Utils.validarNumero(txtTelefono.getText())
+                ||!Utils.validarNumero(txtCarnet.getText())
+                ||estudiantes.verificarCarnet(Integer.parseInt(txtCarnet.getText()))
+                ||cBoxCarrera.getValue()==null
+                ||txtNombre.getText().isEmpty()){
             Utils.mostrarError("Error","Error en los datos ingresados","Revise los datos ingresados!");
             return;
         }
@@ -76,7 +77,7 @@ public class EstudiantesController extends ParentController{
 
         estudiantes.add(nuevo);
         estudiantes.saveInXML();
-        refreshList();
+        refrescarLista();
     }
 
 
