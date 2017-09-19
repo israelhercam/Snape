@@ -2,6 +2,7 @@ package Views;
 
 import Models.Wrappers.Estudiantes;
 import Models.Wrappers.Horarios;
+import Models.Wrappers.Reservas;
 import Models.Wrappers.Salas;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -15,9 +16,11 @@ public class Main extends Application {
     public Estudiantes estudiantes;
     public Salas salas;
     public Horarios horarios;
+    public Reservas reservas;
     Stage stage;
 
     private static Main instance;
+
     public Main () {
         instance=this;
     }
@@ -37,10 +40,14 @@ public class Main extends Application {
         estudiantes=new Estudiantes();
         salas=new Salas();
         horarios=new Horarios();
+        reservas =new Reservas();
 
         estudiantes.loadFromXML();
         salas.loadFromXML();
         horarios.loadFromXML();
+        reservas.loadFromXML();
+
+
 
         stage=primaryStage;
 

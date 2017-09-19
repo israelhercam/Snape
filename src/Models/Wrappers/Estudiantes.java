@@ -88,4 +88,7 @@ public class Estudiantes {
         setLista(estudiantes.getLista());
     }
 
+    public ArrayList<Estudiante> getEstudiantesElegibles() {
+        return null;
+    }
 }

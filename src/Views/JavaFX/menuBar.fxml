@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<MenuBar xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ParentController">
+<MenuBar xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MenuBarController">
     <menus>
         <Menu mnemonicParsing="false" text="Estudiantes">
          <items>
@@ -11,11 +11,12 @@
         <Menu mnemonicParsing="false" text="Salas">
             <items>
                 <MenuItem mnemonicParsing="false" onAction="#menuAdministrarSalas" text="Administrar salas" />
+            <MenuItem mnemonicParsing="false" onAction="#menuReservarSala" text="Reservar sala" />
             </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="x">
+        <Menu mnemonicParsing="false" text="Extras">
             <items>
-                <MenuItem mnemonicParsing="false" text="Delete" />
+                <MenuItem mnemonicParsing="false" onAction="#menuCalificarSala" text="Calificar sala" />
             </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Ayuda">

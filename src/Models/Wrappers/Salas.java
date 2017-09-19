@@ -59,6 +59,16 @@ public class Salas {
         return false;
     }
 
+    public ArrayList<Sala> getSalasActivas(){
+        ArrayList<Sala> res =new ArrayList<>();
+        for (Sala sala:
+             getLista()) {
+            if (sala.getEstado().equals("Activa"))
+                res.add(sala);
+        }
+        return res;
+    }
+
     /**
      * Guarda en un XML la lista de salas
      * @throws Exception

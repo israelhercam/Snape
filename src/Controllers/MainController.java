@@ -1,6 +1,6 @@
 package Controllers;
 
-public class MainController extends ParentController {
+public class MainController extends MenuBarController {
 
 
 

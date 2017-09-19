@@ -1,36 +1,42 @@
 package Models;
 
+import Models.Adapters.LocalDateAdapter;
+import Models.Adapters.LocalTimeAdapter;
+
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-import java.time.LocalDateTime;
-import java.time.Period;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
-@XmlType(propOrder = {"idSala","asunto","estado","fecha","tiempo","participantes"})
-@XmlRootElement(name = "reservacion")
-public class Reservacion {
+@XmlType(propOrder = {"idSala","asunto","estado","fecha","horaInicio","horaFin","participantes"})
+@XmlRootElement(name = "reserva")
+public class Reserva {
     String asunto;
     String idSala;
     String estado;
     List<Participante> participantes;
-    LocalDateTime fecha;
-    Period tiempo;
+    LocalDate fecha;
+    LocalTime horaInicio;
+    LocalTime horaFin;
 
-    public Reservacion() {
+    public Reserva() {
     }
 
     //TODO: Revisar si la fecha esta bien y/o exportarla a otra clase
-    public Reservacion(String asunto, String idSala, String estado, List<Participante> participantes, LocalDateTime fecha, Period tiempo) {
+
+
+    public Reserva(String asunto, String idSala, String estado, List<Participante> participantes, LocalDate fecha, LocalTime horaInicio, LocalTime horaFin) {
         this.asunto = asunto;
         this.idSala = idSala;
         this.estado = estado;
         this.participantes = participantes;
         this.fecha = fecha;
-        this.tiempo = tiempo;
-
+        this.horaInicio = horaInicio;
+        this.horaFin = horaFin;
     }
-
 
     @XmlElement
     public String getAsunto() {
@@ -69,20 +75,33 @@ public class Reservacion {
     }
 
     @XmlElement
-    public LocalDateTime getFecha() {
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
+    public LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(LocalDateTime fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 
+
     @XmlElement
-    public Period getTiempo() {
-        return tiempo;
+    @XmlJavaTypeAdapter(LocalTimeAdapter.class)
+    public LocalTime getHoraInicio() {
+        return horaInicio;
     }
 
-    public void setTiempo(Period tiempo) {
-        this.tiempo = tiempo;
+    public void setHoraInicio(LocalTime horaInicio) {
+        this.horaInicio = horaInicio;
+    }
+
+    @XmlElement
+    @XmlJavaTypeAdapter(LocalTimeAdapter.class)
+    public LocalTime getHoraFin() {
+        return horaFin;
+    }
+
+    public void setHoraFin(LocalTime horaFin) {
+        this.horaFin = horaFin;
     }
 }

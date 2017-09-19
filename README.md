@@ -8,9 +8,9 @@ _**WIP**_
 * Requerimiento ​ 2
 * **[Done(?)]** Requerimiento ​ 3 -Horarios se hacen-
 * **[Done]** Requerimiento ​ 4
-* Requerimiento ​ 5
+* **[WIP]** Requerimiento ​ 5
 * Requerimiento ​ 6
-* Requerimiento ​ 7
+* **[WIP]** Requerimiento ​ 7
 * Requerimiento ​ 8
 ## Autores
 
