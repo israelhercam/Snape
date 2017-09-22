@@ -22,9 +22,9 @@
                     <columns>
                         <TableColumn fx:id="tbcId" editable="false" prefWidth="49.0" text="ID" />
                         <TableColumn fx:id="tbcUbicacion" onEditCommit="#editarUbicacion" prefWidth="84.0" text="Ubicacion" />
-                        <TableColumn fx:id="tbcCapacidad" onEditCommit="#editarCapacidad" prefWidth="75.0" text="Capacidad" />
+                        <TableColumn fx:id="tbcCapacidad" editable="false" prefWidth="75.0" text="Capacidad" />
                         <TableColumn fx:id="tbcRecursos" onEditCommit="#editarRecursos" prefWidth="75.0" text="Recursos" />
-                        <TableColumn fx:id="tbcEstado" editable="false" prefWidth="75.0" text="Estado" />
+                        <TableColumn fx:id="tbcEstado" onEditCommit="#editarEstado" prefWidth="75.0" text="Estado" />
                         <TableColumn fx:id="tbcCalificacion" editable="false" text="Calificación" />
                     </columns>
                <columnResizePolicy>
@@ -58,7 +58,7 @@
                         <TextField fx:id="txtCapacidad" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <TextField fx:id="txtRecursos" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <Button mnemonicParsing="false" onAction="#agregarSala" text="Agregar" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
-                  <Label text="Para editar, doble click en donde desea editar." textAlignment="RIGHT" wrapText="true" GridPane.columnSpan="2147483647" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                  <Label text="Para editar, doble click en donde desea editar. Enter para terminar." textAlignment="RIGHT" wrapText="true" GridPane.columnSpan="2147483647" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
                      <font>
                         <Font size="9.0" />
                      </font>

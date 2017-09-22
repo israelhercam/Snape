@@ -17,7 +17,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import javafx.util.converter.IntegerStringConverter;
 
 import java.io.IOException;
 
@@ -44,8 +43,9 @@ public class SalasController {
         tbcRecursos.setCellValueFactory(new PropertyValueFactory<>("recursos"));
         tbcEstado.setCellValueFactory(new PropertyValueFactory<>("estado"));
         tbcCalificacion.setCellValueFactory(new PropertyValueFactory<>("calificacion"));
+
         tbcUbicacion.setCellFactory(TextFieldTableCell.forTableColumn());
-        tbcCapacidad.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
+        tbcEstado.setCellFactory(TextFieldTableCell.forTableColumn());
         tbcRecursos.setCellFactory(TextFieldTableCell.forTableColumn());
         refrescarLista();
     }
@@ -104,13 +104,19 @@ public class SalasController {
         salas.saveInXML();
     }
 
-    public void editarCapacidad(TableColumn.CellEditEvent cellEditEvent) throws Exception{
-        for (Sala sala:
-                salas.getLista()) {
-            if(sala.getId().equals(((Sala) cellEditEvent.getRowValue()).getId()))
-                sala.setCapacidadMaxima(Integer.parseInt(cellEditEvent.getNewValue().toString()));
+    public void editarEstado(TableColumn.CellEditEvent cellEditEvent) throws Exception{
+        if (cellEditEvent.getNewValue().toString().equals("Activa")
+                ||cellEditEvent.getNewValue().toString().equals("Inactiva")
+                ||cellEditEvent.getNewValue().toString().equals("Mantenimiento")){
+            for (Sala sala:
+                    salas.getLista()) {
+                if(sala.getId().equals(((Sala) cellEditEvent.getRowValue()).getId()))
+                    sala.setEstado(cellEditEvent.getNewValue().toString());
+            }
+            salas.saveInXML();
+        }else{
+            cellEditEvent.getTableView().refresh();
         }
-        salas.saveInXML();
     }
 
     public void editarRecursos(TableColumn.CellEditEvent cellEditEvent) throws Exception{

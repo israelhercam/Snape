@@ -2,10 +2,10 @@
 <salas>
     <sala>
         <id>SAL-1</id>
-        <ubicacion>jkh</ubicacion>
+        <ubicacion>test2</ubicacion>
         <capacidadMaxima>432</capacidadMaxima>
-        <recursos>sd</recursos>
-        <estado>Activa</estado>
+        <recursos>TEST</recursos>
+        <estado>Inactiva</estado>
         <calificacion>100</calificacion>
         <agendaServicio>
             <dia>TUESDAY</dia>
@@ -43,73 +43,5 @@
             <inicio>00:00</inicio>
             <fin>01:00</fin>
         </agendaServicio>
-    </sala>
-    <sala>
-        <id>SAL-4</id>
-        <ubicacion>asd</ubicacion>
-        <capacidadMaxima>2</capacidadMaxima>
-        <recursos>asd</recursos>
-        <estado>Activa</estado>
-        <calificacion>100</calificacion>
-        <agendaServicio>
-            <dia>TUESDAY</dia>
-            <inicio>00:00</inicio>
-            <fin>01:00</fin>
-        </agendaServicio>
-        <agendaServicio>
-            <dia>TUESDAY</dia>
-            <inicio>02:00</inicio>
-            <fin>03:00</fin>
-        </agendaServicio>
-    </sala>
-    <sala>
-        <id>SAL-5</id>
-        <ubicacion>asd</ubicacion>
-        <capacidadMaxima>2</capacidadMaxima>
-        <recursos>asd</recursos>
-        <estado>Activa</estado>
-        <calificacion>100</calificacion>
-    </sala>
-    <sala>
-        <id>SAL-6</id>
-        <ubicacion>asd</ubicacion>
-        <capacidadMaxima>2</capacidadMaxima>
-        <recursos>sd</recursos>
-        <estado>Activa</estado>
-        <calificacion>100</calificacion>
-        <agendaServicio>
-            <dia>TUESDAY</dia>
-            <inicio>02:00</inicio>
-            <fin>03:00</fin>
-        </agendaServicio>
-    </sala>
-    <sala>
-        <id>SAL-7</id>
-        <ubicacion>asd</ubicacion>
-        <capacidadMaxima>2</capacidadMaxima>
-        <recursos>sd</recursos>
-        <estado>Activa</estado>
-        <calificacion>100</calificacion>
-    </sala>
-    <sala>
-        <id>SAL-8</id>
-        <ubicacion>sdf</ubicacion>
-        <capacidadMaxima>32</capacidadMaxima>
-        <recursos>df</recursos>
-        <estado>Activa</estado>
-        <calificacion>100</calificacion>
-        <agendaServicio>
-            <dia>TUESDAY</dia>
-            <inicio>00:00</inicio>
-            <fin>01:00</fin>
-        </agendaServicio>
-    </sala>
-    <sala>
-        <id>SAL-9</id>
-        <ubicacion>dsf</ubicacion>
-        <capacidadMaxima>32</capacidadMaxima>
-        <recursos>d</recursos>
-        <estado>Activa</estado>
-        <calificacion>100</calificacion>
     </sala>
 </salas>
