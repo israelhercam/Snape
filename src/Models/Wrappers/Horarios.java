@@ -17,7 +17,7 @@ import java.util.ArrayList;
  *
  * @author Esteban Esquivel
  * @author Israel Padilla
- * @author Israel
+ * @author Israel Herrera
  */
 
 @XmlRootElement(name = "horarios")
@@ -36,42 +36,7 @@ public class Horarios {
 
     //Terminan los Getters y Setters
 
-    /**
-     * Añade un horario.
-     * @param nuevo Horario a añadir.
-     */
-    public void add(Horario nuevo){
-        if (!verificarHorario(nuevo.getIdSala()))
-            lista.add(nuevo);
-        else{
-            lista.remove(buscar(nuevo.getIdSala()));
-            lista.add(nuevo);
-        }
 
-    }
-
-    public Horario buscar(String id){
-        for (Horario horario:
-                getLista()) {
-            if (horario.getIdSala().equals(id))
-                return horario;
-        }
-        return null;
-    }
-
-    /**
-     * Verifica si el participante tiene un CORREO diferente.
-     * @param pHorarioId Estudiante que se busca en la lista.
-     * @return
-     */
-    public boolean verificarHorario(String pHorarioId){
-        for (Horario horario:
-             getLista()) {
-            if (horario.getIdSala().equals(pHorarioId))
-                return true;
-        }
-        return false;
-    }
 
     /**
      * Guarda en un XML la lista de estudiantes

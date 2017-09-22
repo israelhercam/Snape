@@ -1,60 +1,64 @@
 package Models;
 
-import Utils.Utils;
+import Models.Adapters.LocalTimeAdapter;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-import java.util.ArrayList;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.time.DayOfWeek;
+import java.time.LocalTime;
 
-@XmlType(propOrder = {"idSala","turnos"})
+@XmlType(propOrder = {"dia","inicio","fin"})
+
 @XmlRootElement(name = "horario")
 public class Horario {
-    private String idSala;
-    private ArrayList<Turno> turnos;
+    private DayOfWeek dia;
+    private LocalTime inicio;
+    private LocalTime fin;
 
-    public Horario() {
+    public Horario() {}
+
+    public Horario(DayOfWeek dia, LocalTime inicio, LocalTime fin) {
+        this.dia = dia;
+        this.inicio = inicio;
+        this.fin = fin;
     }
 
-    public Horario(String idSala) {
-        this.idSala=idSala;
-        turnos=new ArrayList<>();
+    @XmlElement
+    public DayOfWeek getDia() {
+        return dia;
     }
 
-    @XmlElement(name="turnos")
-    public ArrayList<Turno> getTurnos() {
-        return turnos;
+    public void setDia(DayOfWeek dia) {
+        this.dia = dia;
     }
 
-    public void setTurnos(ArrayList<Turno> turnos) {
-        this.turnos = turnos;
+    @XmlElement
+    @XmlJavaTypeAdapter(LocalTimeAdapter.class)
+    public LocalTime getInicio() {
+        return inicio;
     }
 
-    @XmlElement(name="idSala")
-    public String getIdSala() {
-        return idSala;
+    public void setInicio(LocalTime inicio) {
+        this.inicio = inicio;
     }
 
-    public void setIdSala(String idSala) {
-        this.idSala = idSala;
+    @XmlElement
+    @XmlJavaTypeAdapter(LocalTimeAdapter.class)
+    public LocalTime getFin() {
+        return fin;
     }
 
-    public void agregarTurno(Turno nuevo){
-        if (!verificarTurno(nuevo))
-            turnos.add(nuevo);
+    public void setFin(LocalTime fin) {
+        this.fin = fin;
     }
 
-
-
-
-    public boolean verificarTurno(Turno nuevo){
-        for (Turno turno:
-             turnos) {
-            if (nuevo.getDia()==turno.getDia()&&(Utils.estaEnMedio(turno.getInicio(),nuevo.getInicio(),turno.getFin())
-                    ||Utils.estaEnMedio(turno.getInicio(),nuevo.getFin(),turno.getFin())))
-                return true;
-        }
-        return false;
-
+    @Override
+    public String toString() {
+        return "Horario:" +
+                " " + dia +
+                " " + inicio +
+                "-" + fin;
     }
 }

@@ -6,17 +6,16 @@ _**WIP**_
 ### Camino
 * **[DONE]** Requerimiento ​ 1
 * Requerimiento ​ 2
-* **[Done(?)]** Requerimiento ​ 3 -Horarios se hacen-
-* **[Done]** Requerimiento ​ 4
+* **[DONE]** Requerimiento ​ 3
+* **[DONE]** Requerimiento ​ 4
 * **[WIP]** Requerimiento ​ 5
 * Requerimiento ​ 6
 * **[WIP]** Requerimiento ​ 7
 * Requerimiento ​ 8
-## Autores
 
-* **Esteban Esquivel** - *Initial work* - [eadan97](https://github.com/eadan97)
-* **Israel Padilla** 
-* **Israel** 
+## Autor(es)
+
+* **Esteban Esquivel** - *Initial work* - [eadan97](https://github.com/eadan97) 
 
 
 ## Hecho con:

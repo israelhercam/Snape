@@ -1,7 +1,8 @@
 package Controllers;
 
 import Models.Horario;
-import Models.Turno;
+import Models.Sala;
+import Models.Wrappers.Horarios;
 import Utils.Utils;
 import Views.Main;
 import javafx.collections.FXCollections;
@@ -11,70 +12,75 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.time.DayOfWeek;
-import java.time.LocalTime;
-
 public class HorarioController {
-    public String id;
-    public TitledPane tpnSala;
-    public TableView tblSalas;
+    public Sala sala;
+    public TitledPane tpnHorarios;
+    public TableView tblHorarios;
     public TableColumn tbcDia;
     public TableColumn tbcInicio;
     public TableColumn tbcFin;
-    public ComboBox cBoxDia;
+    public ComboBox cBoxHorarios;
     public Spinner spnInicioHora;
     public Spinner spnInicioMinutos;
     public Spinner spnFinHora;
     public Spinner spnFinMinutos;
-    public Horario horario;
+    public Horarios horarios;
     public Button btnEnviar;
 
     public void initialize(){
-        initData();
+        horarios=Main.getInstance().horarios;
+        this.sala=SalasController.sala;
+        tpnHorarios.setText("Sala: "+sala.getId());
 
         tbcDia.setCellValueFactory(new PropertyValueFactory<>("dia"));
         tbcInicio.setCellValueFactory(new PropertyValueFactory<>("inicio"));
         tbcFin.setCellValueFactory(new PropertyValueFactory<>("fin"));
-        poblarDias();
-    }
-
-    public void initData() {
-        this.id=SalasController.id;
-        tpnSala.setText("Sala: "+id);
-        horario=new Horario(id);
-    }
-
-    public void agregarTurno(ActionEvent actionEvent) {
-        if (cBoxDia.getValue()==null
-                ||spnInicioHora.getValue()==spnFinHora.getValue()
-                &&spnInicioMinutos.getValue()==spnFinMinutos.getValue()){
-            Utils.mostrarError("Error","Error en los datos ingresados","Revise los datos ingresados!");
-            return;
-        }
-        horario.agregarTurno(new Turno(((DayOfWeek) cBoxDia.getValue()),
-                LocalTime.of((int)spnInicioHora.getValue(),(int)spnInicioMinutos.getValue()),
-                LocalTime.of((int)spnFinHora.getValue(),(int)spnFinMinutos.getValue())));
+        poblarHorarios();
         refrescarLista();
-
     }
 
-    private void poblarDias(){
-        for (DayOfWeek dia: DayOfWeek.values()) {
-            cBoxDia.getItems().add(dia);
+
+
+    private void poblarHorarios(){
+        for (Horario horario: horarios.getLista()) {
+            cBoxHorarios.getItems().add(horario);
 //dia.getDisplayName(TextStyle.FULL, new Locale("es","CR")
         }
     }
 
+    public void agregarHorario(ActionEvent actionEvent) {
+        if (cBoxHorarios.getValue()==null
+                ||sala.validarHorario((Horario)cBoxHorarios.getValue())){
+            Utils.mostrarError("Error","Error en los datos ingresados","Revise los datos ingresados!");
+            return;
+        }
+        sala.agregarHorario((Horario) cBoxHorarios.getValue());
+        refrescarLista();
+
+    }
+
+
     public void enviarHorario(ActionEvent actionEvent) throws Exception {
 
-        Main.getInstance().horarios.add(horario);
-        Main.getInstance().horarios.saveInXML();
+        //TODO: No se puede enviar si no tiene un horario
+        Main.getInstance().salas.saveInXML();
         Stage stage = (Stage) btnEnviar.getScene().getWindow();
         stage.close();
     }
 
     public void refrescarLista(){
-        ObservableList<Turno> list = FXCollections.observableArrayList(horario.getTurnos());
-        tblSalas.setItems(list);
+        ObservableList<Horario> list = FXCollections.observableArrayList(sala.getAgendaServicio());
+        tblHorarios.setItems(list);
+    }
+
+    public void eliminarHorario(ActionEvent actionEvent) {
+        if (cBoxHorarios.getValue()==null
+                ||!sala.validarHorario((Horario)cBoxHorarios.getValue())){
+            Utils.mostrarError("Error","Error en los datos ingresados","Revise los datos ingresados!");
+            return;
+        }
+        sala.eliminarHorario((Horario) cBoxHorarios.getValue());
+        refrescarLista();
+
     }
 }

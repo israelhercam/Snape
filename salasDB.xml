@@ -1,139 +1,115 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <salas>
     <sala>
-        <calificacion>100</calificacion>
-        <capacidadMaxima>23</capacidadMaxima>
-        <estado>Activa</estado>
         <id>SAL-1</id>
-        <recursos>Cosas</recursos>
-        <ubicacion>Ahi</ubicacion>
+        <ubicacion>jkh</ubicacion>
+        <capacidadMaxima>432</capacidadMaxima>
+        <recursos>sd</recursos>
+        <estado>Activa</estado>
+        <calificacion>100</calificacion>
+        <agendaServicio>
+            <dia>TUESDAY</dia>
+            <inicio>00:00</inicio>
+            <fin>01:00</fin>
+        </agendaServicio>
     </sala>
     <sala>
-        <calificacion>100</calificacion>
-        <capacidadMaxima>2</capacidadMaxima>
-        <estado>Activa</estado>
         <id>SAL-2</id>
-        <recursos>Nada</recursos>
-        <ubicacion>Por Ahi</ubicacion>
+        <ubicacion>asd</ubicacion>
+        <capacidadMaxima>2</capacidadMaxima>
+        <recursos>d</recursos>
+        <estado>Activa</estado>
+        <calificacion>100</calificacion>
+        <agendaServicio>
+            <dia>TUESDAY</dia>
+            <inicio>00:00</inicio>
+            <fin>01:00</fin>
+        </agendaServicio>
+        <agendaServicio>
+            <dia>TUESDAY</dia>
+            <inicio>02:00</inicio>
+            <fin>03:00</fin>
+        </agendaServicio>
     </sala>
     <sala>
-        <calificacion>100</calificacion>
-        <capacidadMaxima>123</capacidadMaxima>
-        <estado>Activa</estado>
         <id>SAL-3</id>
-        <recursos>asd</recursos>
-        <ubicacion>asd</ubicacion>
+        <ubicacion>dfg</ubicacion>
+        <capacidadMaxima>3</capacidadMaxima>
+        <recursos>df</recursos>
+        <estado>Activa</estado>
+        <calificacion>100</calificacion>
+        <agendaServicio>
+            <dia>TUESDAY</dia>
+            <inicio>00:00</inicio>
+            <fin>01:00</fin>
+        </agendaServicio>
     </sala>
     <sala>
-        <calificacion>100</calificacion>
-        <capacidadMaxima>123</capacidadMaxima>
-        <estado>Activa</estado>
         <id>SAL-4</id>
-        <recursos>asd</recursos>
         <ubicacion>asd</ubicacion>
+        <capacidadMaxima>2</capacidadMaxima>
+        <recursos>asd</recursos>
+        <estado>Activa</estado>
+        <calificacion>100</calificacion>
+        <agendaServicio>
+            <dia>TUESDAY</dia>
+            <inicio>00:00</inicio>
+            <fin>01:00</fin>
+        </agendaServicio>
+        <agendaServicio>
+            <dia>TUESDAY</dia>
+            <inicio>02:00</inicio>
+            <fin>03:00</fin>
+        </agendaServicio>
     </sala>
     <sala>
-        <calificacion>100</calificacion>
-        <capacidadMaxima>123</capacidadMaxima>
-        <estado>Activa</estado>
         <id>SAL-5</id>
+        <ubicacion>asd</ubicacion>
+        <capacidadMaxima>2</capacidadMaxima>
         <recursos>asd</recursos>
-        <ubicacion>asad</ubicacion>
+        <estado>Activa</estado>
+        <calificacion>100</calificacion>
     </sala>
     <sala>
-        <calificacion>100</calificacion>
-        <capacidadMaxima>2</capacidadMaxima>
-        <estado>Activa</estado>
         <id>SAL-6</id>
-        <recursos>asd</recursos>
-        <ubicacion>sdfs</ubicacion>
+        <ubicacion>asd</ubicacion>
+        <capacidadMaxima>2</capacidadMaxima>
+        <recursos>sd</recursos>
+        <estado>Activa</estado>
+        <calificacion>100</calificacion>
+        <agendaServicio>
+            <dia>TUESDAY</dia>
+            <inicio>02:00</inicio>
+            <fin>03:00</fin>
+        </agendaServicio>
     </sala>
     <sala>
-        <calificacion>100</calificacion>
-        <capacidadMaxima>123</capacidadMaxima>
-        <estado>Activa</estado>
         <id>SAL-7</id>
-        <recursos>as</recursos>
         <ubicacion>asd</ubicacion>
+        <capacidadMaxima>2</capacidadMaxima>
+        <recursos>sd</recursos>
+        <estado>Activa</estado>
+        <calificacion>100</calificacion>
     </sala>
     <sala>
-        <calificacion>100</calificacion>
-        <capacidadMaxima>2</capacidadMaxima>
-        <estado>Activa</estado>
         <id>SAL-8</id>
-        <recursos>asd</recursos>
-        <ubicacion>asd</ubicacion>
+        <ubicacion>sdf</ubicacion>
+        <capacidadMaxima>32</capacidadMaxima>
+        <recursos>df</recursos>
+        <estado>Activa</estado>
+        <calificacion>100</calificacion>
+        <agendaServicio>
+            <dia>TUESDAY</dia>
+            <inicio>00:00</inicio>
+            <fin>01:00</fin>
+        </agendaServicio>
     </sala>
     <sala>
-        <calificacion>100</calificacion>
-        <capacidadMaxima>2</capacidadMaxima>
-        <estado>Activa</estado>
         <id>SAL-9</id>
-        <recursos>asd</recursos>
-        <ubicacion>asd</ubicacion>
-    </sala>
-    <sala>
-        <calificacion>100</calificacion>
-        <capacidadMaxima>2</capacidadMaxima>
+        <ubicacion>dsf</ubicacion>
+        <capacidadMaxima>32</capacidadMaxima>
+        <recursos>d</recursos>
         <estado>Activa</estado>
-        <id>SAL-10</id>
-        <recursos>asd</recursos>
-        <ubicacion>ads</ubicacion>
-    </sala>
-    <sala>
         <calificacion>100</calificacion>
-        <capacidadMaxima>2</capacidadMaxima>
-        <estado>Activa</estado>
-        <id>SAL-11</id>
-        <recursos>asd</recursos>
-        <ubicacion>asd</ubicacion>
-    </sala>
-    <sala>
-        <calificacion>100</calificacion>
-        <capacidadMaxima>4</capacidadMaxima>
-        <estado>Activa</estado>
-        <id>SAL-12</id>
-        <recursos>gf</recursos>
-        <ubicacion>klj</ubicacion>
-    </sala>
-    <sala>
-        <calificacion>100</calificacion>
-        <capacidadMaxima>2</capacidadMaxima>
-        <estado>Activa</estado>
-        <id>SAL-13</id>
-        <recursos>asd</recursos>
-        <ubicacion>ads</ubicacion>
-    </sala>
-    <sala>
-        <calificacion>100</calificacion>
-        <capacidadMaxima>2</capacidadMaxima>
-        <estado>Activa</estado>
-        <id>SAL-14</id>
-        <recursos>ads</recursos>
-        <ubicacion>asd</ubicacion>
-    </sala>
-    <sala>
-        <calificacion>100</calificacion>
-        <capacidadMaxima>2</capacidadMaxima>
-        <estado>Activa</estado>
-        <id>SAL-15</id>
-        <recursos>asd</recursos>
-        <ubicacion>asd</ubicacion>
-    </sala>
-    <sala>
-        <calificacion>100</calificacion>
-        <capacidadMaxima>2</capacidadMaxima>
-        <estado>Activa</estado>
-        <id>SAL-16</id>
-        <recursos>asd</recursos>
-        <ubicacion>asd</ubicacion>
-    </sala>
-    <sala>
-        <calificacion>100</calificacion>
-        <capacidadMaxima>2</capacidadMaxima>
-        <estado>Activa</estado>
-        <id>SAL-17</id>
-        <recursos>sa</recursos>
-        <ubicacion>asd</ubicacion>
     </sala>
 </salas>

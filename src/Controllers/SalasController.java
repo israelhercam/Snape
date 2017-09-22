@@ -32,7 +32,7 @@ public class SalasController {
     public TextField txtUbicacion;
     public TextField txtCapacidad;
     public TextField txtRecursos;
-    public static String id;
+    public static Sala sala;
     Salas salas = Main.getInstance().salas;
 
 
@@ -58,7 +58,7 @@ public class SalasController {
             return;
         }
         Sala nueva=new Sala(txtUbicacion.getText(),Integer.parseInt(txtCapacidad.getText()),txtRecursos.getText());
-        id=nueva.getId();
+        sala=nueva;
         obtenerHorario();
         txtUbicacion.setText("");
         txtCapacidad.setText("");
@@ -83,7 +83,7 @@ public class SalasController {
             root = FXMLLoader.load(getClass().getResource("/Views/JavaFX/horario.fxml"));
             Stage stage = new Stage();
             stage.setTitle("Horario");
-            stage.setScene(new Scene(root, 800, 450));
+            stage.setScene(new Scene(root, 800, 500));
             stage.initStyle(StageStyle.UNDECORATED);
             stage.show();
 
