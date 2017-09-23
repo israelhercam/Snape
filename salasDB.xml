@@ -57,4 +57,12 @@
             <fin>01:00</fin>
         </agendaServicio>
     </sala>
+    <sala>
+        <id>SAL-5</id>
+        <ubicacion>asd</ubicacion>
+        <capacidadMaxima>2</capacidadMaxima>
+        <recursos>www</recursos>
+        <estado>Activa</estado>
+        <calificaciones>100</calificaciones>
+    </sala>
 </salas>

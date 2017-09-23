@@ -135,4 +135,8 @@ public class Reserva {
     public void setHoraFin(LocalTime horaFin) {
         this.horaFin = horaFin;
     }
+
+    public int getCantidadParticipantes(){
+        return participantes.size();
+    }
 }

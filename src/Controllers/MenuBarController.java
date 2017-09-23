@@ -41,4 +41,13 @@ public class MenuBarController {
             ex.printStackTrace();
         }
     }
+
+    public void menuConsultarSala(ActionEvent actionEvent) {
+        try {
+            Main.getInstance().replaceSceneContent("/Views/JavaFX/consultarSala.fxml");
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
 }

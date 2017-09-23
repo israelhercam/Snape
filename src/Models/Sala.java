@@ -138,4 +138,9 @@ public class Sala {
         }
         return false;
     }
+
+    @Override
+    public String toString() {
+        return "Sala " + id;
+    }
 }
