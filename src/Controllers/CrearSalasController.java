@@ -20,7 +20,7 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-public class SalasController {
+public class CrearSalasController {
     public TableColumn tbcId;
     public TableColumn tbcUbicacion;
     public TableColumn tbcCapacidad;
@@ -42,7 +42,7 @@ public class SalasController {
         tbcCapacidad.setCellValueFactory(new PropertyValueFactory<>("capacidadMaxima"));
         tbcRecursos.setCellValueFactory(new PropertyValueFactory<>("recursos"));
         tbcEstado.setCellValueFactory(new PropertyValueFactory<>("estado"));
-        tbcCalificacion.setCellValueFactory(new PropertyValueFactory<>("calificacion"));
+        tbcCalificacion.setCellValueFactory(new PropertyValueFactory<>("calificaciones"));
 
         tbcUbicacion.setCellFactory(TextFieldTableCell.forTableColumn());
         tbcEstado.setCellFactory(TextFieldTableCell.forTableColumn());
@@ -53,7 +53,8 @@ public class SalasController {
 
         if (!Utils.validarNumero(txtCapacidad.getText())
                 ||txtUbicacion.getText().isEmpty()
-                ||txtRecursos.getText().isEmpty()){
+                ||txtRecursos.getText().isEmpty()
+                ||!Utils.numeroMayorQue(txtCapacidad.getText(),0)){
             Utils.mostrarError("Error","Error en los datos ingresados","Revise los datos ingresados!");
             return;
         }

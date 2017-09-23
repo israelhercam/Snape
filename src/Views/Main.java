@@ -13,6 +13,8 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     //TODO: Precargar 10 estudiantes en el XML
+    //TODO: Precargar 6 horarios
+    //TODO: JAVADOC EVERYWHERE
     public Estudiantes estudiantes;
     public Salas salas;
     public Horarios horarios;
@@ -74,6 +76,8 @@ public class Main extends Application {
         stage.sizeToScene();
         return page;
     }
+
+
 
 
 

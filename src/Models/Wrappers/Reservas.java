@@ -10,6 +10,7 @@ import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.File;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
@@ -102,5 +103,25 @@ public class Reservas {
     public int reservarSemanalesEstudiante(Estudiante estudiante) {
         //TODO: Terminar
         return 0;
+    }
+
+    public ArrayList<Reserva> reservasSala(String id) {
+        ArrayList<Reserva> res=new ArrayList<>();
+        for (Reserva reserva:lista) {
+            if (reserva.getIdSala().equals(id))
+                res.add(reserva);
+        }
+        return res;
+    }
+
+    public ArrayList<Reserva> reservasSalaSemanal(String id) {
+        ArrayList<Reserva> res=new ArrayList<>();
+        for (Reserva reserva:lista) {
+            if (reserva.getIdSala().equals(id)
+                    &&reserva.getFecha().isBefore(LocalDate.now().plusWeeks(1))
+                    &&reserva.getFecha().isAfter(LocalDate.now()))
+                res.add(reserva);
+        }
+        return res;
     }
 }

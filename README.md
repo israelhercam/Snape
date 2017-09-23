@@ -8,8 +8,8 @@ _**WIP**_
 * Requerimiento ​ 2
 * **[DONE]** Requerimiento ​ 3
 * **[DONE]** Requerimiento ​ 4
-* **[WIP]** Requerimiento ​ 5
-* Requerimiento ​ 6
+* **[WIP]** Requerimiento ​ 5 - Falta Testing - Falta SMS*implementacion -
+* **[WIP]** Requerimiento ​ 6 -Falta Testing
 * **[WIP]** Requerimiento ​ 7
 * Requerimiento ​ 8
 
