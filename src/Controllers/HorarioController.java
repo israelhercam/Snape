@@ -29,7 +29,7 @@ public class HorarioController {
 
     public void initialize(){
         horarios=Main.getInstance().horarios;
-        this.sala=SalasController.sala;
+        this.sala= CrearSalasController.sala;
         tpnHorarios.setText("Sala: "+sala.getId());
 
         tbcDia.setCellValueFactory(new PropertyValueFactory<>("dia"));

@@ -7,7 +7,7 @@ import javafx.event.ActionEvent;
 public class MenuBarController {
     public void menuAdministrarEstudiantes(ActionEvent actionEvent) {
         try {
-            Main.getInstance().replaceSceneContent("/Views/JavaFX/estudiantes.fxml");
+            Main.getInstance().replaceSceneContent("/Views/JavaFX/crearEstudiantes.fxml");
 
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -17,7 +17,7 @@ public class MenuBarController {
 
     public void menuAdministrarSalas(ActionEvent actionEvent) {
         try {
-            Main.getInstance().replaceSceneContent("/Views/JavaFX/salas.fxml");
+            Main.getInstance().replaceSceneContent("/Views/JavaFX/crearSalas.fxml");
 
         } catch (Exception ex) {
             ex.printStackTrace();
