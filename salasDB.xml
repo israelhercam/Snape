@@ -6,7 +6,7 @@
         <capacidadMaxima>432</capacidadMaxima>
         <recursos>TEST</recursos>
         <estado>Inactiva</estado>
-        <calificacion>100</calificacion>
+        <calificaciones>100</calificaciones>
         <agendaServicio>
             <dia>TUESDAY</dia>
             <inicio>00:00</inicio>
@@ -19,7 +19,7 @@
         <capacidadMaxima>2</capacidadMaxima>
         <recursos>d</recursos>
         <estado>Activa</estado>
-        <calificacion>100</calificacion>
+        <calificaciones>100</calificaciones>
         <agendaServicio>
             <dia>TUESDAY</dia>
             <inicio>00:00</inicio>
@@ -37,7 +37,20 @@
         <capacidadMaxima>3</capacidadMaxima>
         <recursos>df</recursos>
         <estado>Activa</estado>
-        <calificacion>100</calificacion>
+        <calificaciones>100</calificaciones>
+        <agendaServicio>
+            <dia>TUESDAY</dia>
+            <inicio>00:00</inicio>
+            <fin>01:00</fin>
+        </agendaServicio>
+    </sala>
+    <sala>
+        <id>SAL-4</id>
+        <ubicacion>sdf</ubicacion>
+        <capacidadMaxima>32</capacidadMaxima>
+        <recursos>df</recursos>
+        <estado>Activa</estado>
+        <calificaciones>100</calificaciones>
         <agendaServicio>
             <dia>TUESDAY</dia>
             <inicio>00:00</inicio>

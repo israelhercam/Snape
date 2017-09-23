@@ -11,11 +11,14 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
-@XmlType(propOrder = {"idSala","asunto","estado","fecha","horaInicio","horaFin","participantes"})
+@XmlType(propOrder = {"id","idSala","idOrganizador","asunto","estado","fecha","horaInicio","horaFin","participantes"})
 @XmlRootElement(name = "reserva")
 public class Reserva {
+    static int cantReservas=0;
+    int id;
     String asunto;
     String idSala;
+    int idOrganizador;
     String estado;
     List<Participante> participantes;
     LocalDate fecha;
@@ -29,6 +32,8 @@ public class Reserva {
 
 
     public Reserva(String asunto, String idSala, String estado, List<Participante> participantes, LocalDate fecha, LocalTime horaInicio, LocalTime horaFin) {
+        cantReservas++;
+        this.id=cantReservas;
         this.asunto = asunto;
         this.idSala = idSala;
         this.estado = estado;
@@ -36,6 +41,32 @@ public class Reserva {
         this.fecha = fecha;
         this.horaInicio = horaInicio;
         this.horaFin = horaFin;
+    }
+
+    @XmlElement
+    public int getIdOrganizador() {
+        return idOrganizador;
+    }
+
+    public void setIdOrganizador(int pIdOrganizador) {
+        idOrganizador = pIdOrganizador;
+    }
+
+    public static int getCantReservas() {
+        return cantReservas;
+    }
+
+    public static void setCantReservas(int pCantReservas) {
+        cantReservas = pCantReservas;
+    }
+
+    @XmlElement
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int pId) {
+        id = pId;
     }
 
     @XmlElement
